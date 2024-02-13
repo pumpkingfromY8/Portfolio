@@ -1,0 +1,86 @@
+
+
+#myModelViewer{
+    background-color: transparent;
+}
+.content .clip_bg{
+   width: 50%;
+   height: 50%;
+   background-color: black;
+   overflow-y: visible;
+  
+
+ }
+.content  img{
+    position: absolute; margin: 3rem 0rem 0rem 8rem;
+    filter: drop-shadow(5px 6px 15px #000000d0);
+   
+    transition: 0.4s ease-in-out;
+
+    
+ }
+ .content img:hover{
+  transform: scale(104%);
+ }
+.content .textcontact {
+   float: right;
+   margin-top: 4%;
+
+}
+.content .textcontact h1 {
+    color: #ff7200;;
+    font-size: 60px;
+    text-shadow: 5px 6px 18px #24242496;
+}
+.content .textcontact span {
+    width: 4px;
+    height: 20px;
+    background: #fd4a47;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 5%;
+    left: -15%;
+
+}
+.content .textcontact p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-left: 22px;
+
+}
+/* icons */
+.content .textcontact .social-icons{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+.content .textcontact .social-icons .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+  }
+
+  .content .textcontact .social-icons .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #fff;
+    transition: 0.4s ease-in-out;
+
+  }
+  .content .textcontact .social-icons .icon svg:hover {
+    height: 1.55rem;
+    width: 1.55rem;
+    fill: #e9ca66;
+    transition: 0.4s ease-in-out;
+
+  }
+
+/* end icons */
+
+abbr[title] {
+    text-decoration: none;
+}
