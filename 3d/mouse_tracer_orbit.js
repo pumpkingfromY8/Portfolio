@@ -1,5 +1,6 @@
 const modelViewer = document.getElementById('myModelViewer');
-const content = document.getElementById('content');
+const content = document.getElementById('body_farmer');
+const img = document.getElementById('img_kimmy');
 
 
 content.addEventListener('mousemove', e => {
@@ -15,5 +16,15 @@ content.addEventListener('mousemove', e => {
 
     // Set the camera orbit angles
     modelViewer.cameraOrbit = `${verticalAngle}deg ${horizontalAngle}deg`;
+
+    
+   
+   
 });
+
+function delay(){
+    img.style.display = "block";
+};
+
+setInterval(delay, 3000);
 
