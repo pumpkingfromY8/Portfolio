@@ -15,29 +15,44 @@
     background-position: center;
     background-repeat: none;
     background-size: cover;
-background-attachment: fixed;
+    background-attachment: fixed;
 }
 
 .navbar{
-    width: 1200px;
+    position: relative;
+    top: 0px;
+    width: 100%;
     height: 75px;
     margin: auto;
+    margin: 0px;
+    box-shadow: 5px 6px 15px #000000d0;
 }
 
 .icon{
     width: 200px;
     float: left;
     height: 70px;
+    display: flex;
 }
 
 .logo{
     color: #ff7200;
-    font-size: 28px;
-    font-family: Arial;
-    padding-left: 20px;
+    font-size: 14px;
+    font-family:'Jokerman';
+    font:italic;
+    padding-left: 9px;
     float: left;
-    padding-top: 10px;
-    margin-top: 5px
+  
+    text-shadow: 5px 6px 15px #0f0f0fd0;
+    margin-top: 19px
+    
+}
+.logo_icon{
+    width: 70%;
+    height: 100%;
+    margin: 5px;
+    margin-left: 18px;
+    
 }
 
 .menu{
@@ -49,15 +64,19 @@ background-attachment: fixed;
 ul{
     float: left;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    gap: 1.5rem;
 }
 
 ul li{
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
+    margin-left: 32px;
+    margin-top: 7px;
     font-size: 14px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
 }
 
 ul li a{
@@ -73,9 +92,10 @@ ul li a:hover{
     color: #ff7200;
 }
 
+
 .search{
     width: 330px;
-    float: left;
+    float: right;
     margin-left: 270px;
 }
 
@@ -120,6 +140,31 @@ ul li a:hover{
     outline: none;
 }
 
+/* clip */
+.clip_bg{
+    margin-left: 10rem;
+    margin-top:6rem;position: absolute; 
+   width: 30%; height: 50%; 
+   clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 100%, 50% 70%, 100% 100%, 100% 100%, 70% 50%, 100% 0, 100% 0, 50% 30%);
+   background-image: linear-gradient(  to right,
+   rgba(88, 65, 3, 0.295),
+   rgba(31, 22, 30, 0.349));
+   backdrop-filter: blur(15px);
+   box-shadow: 5px 6px 15px #000000d0;
+
+   transition: 1.4s all ease-in-out;
+
+   
+
+}
+
+.clip_bg:hover{
+    transform: matrix(0.7,-0.5,0.4,0.5,0.7);
+  
+    transform: rotate(90deg);
+    transition: 1.4s all ease-in-out;
+
+}
 .content{
     width: 1200px;
     height: auto;
