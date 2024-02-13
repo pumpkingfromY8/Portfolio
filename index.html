@@ -10,16 +10,17 @@
     <div class="main">
         <div class="navbar">
             <div class="icon">
+                <img src="img/fav.png" class="logo_icon" alt="">
                 <h2 class="logo">Pumpking's Code Garden</h2>
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a id="home">HOME</a></li>
-                    <li><a id="about">ABOUT</a></li>
+                    <li id="home_link" style="background-image: linear-gradient( to right, rgba(26, 22, 14, 0.226), #ff73005d);"><a id="home">HOME</a></li>
+                    <li id="about_link"><a id="about">ABOUT</a></li>
                     <li><a href="#">SERVICES</a></li>
                     <li><a href="garden.html">GARDEN</a></li>
-                    <li><a href="#">FARMER</a></li>
+                    <li><a href="farmer.html">FARMER</a></li>
                 </ul>
             </div>
 
@@ -32,13 +33,13 @@
         <div class="content">
             <!-- home -->
             <h1 id="homeh1">Schoolworks  & <br><span>Source code</span> <br>Cultivating IT Excellence!</h1>
-            <p id="homecontent"class="par">"Welcome to Pumpkin's Code Harvest Hub, where creativity meets code. Explore a bountiful </br>collection of source code, IT projects, and schoolworks from the world of Information Technology.</br> Join us in cultivating knowledge and sharing IT brilliance. Let's grow together!"</p>
+            <p id="homecontent"class="par">"Welcome to Pumpking's Code Harvest Hub, where creativity meets code. Explore a bountiful </br>collection of source code, IT projects, and schoolworks from the world of Information Technology.</br> Join us in cultivating knowledge and sharing IT brilliance. Let's grow together!"</p>
 
             <!-- about -->
-            <h1 style="display: none;"id="abouth1">About<br><span>Pumpkin's</span> <br>Garden</h1>
-            <p style="display: none;"id="aboutcontent"class="par">"At Pumpkin's Code Garden, we've created a vibrant digital ecosystem where farmers of</br> Information Technology gather to sow, nurture, and share their digital seeds of knowledge."</p>
+            <h1 style="display: none;"id="abouth1">About<br><span>Pumpking's</span> <br>Garden</h1>
+            <p style="display: none;"id="aboutcontent"class="par">"At Pumpking's Code Garden, we've created a vibrant digital ecosystem where farmers of</br> Information Technology gather to sow, nurture, and share their digital seeds of knowledge."</p>
 
-             <button class="cn"><a href="#">Explore</a></button>
+             <button class="cn"><a href="garden.html">Explore</a></button>
 
                 <div class="form" id="form" style="display: none;">
                     <h2>Login Here</h2>
@@ -67,77 +68,9 @@
                 
         </div>
     </div>
-    <script>
-                    const aboutButton = document.getElementById("about");
-                        const descriptionButton = document.getElementById("home");
-                        const abouth1 = document.getElementById("abouth1");
-                        const aboutSection = document.getElementById("aboutcontent");
-                        const descriptionh1 = document.getElementById("homeh1");
-                        const descriptionSection = document.getElementById("homecontent");
-
-                        aboutButton.addEventListener("click", function() {
-                            abouth1.style.display = "block";
-                            aboutSection.style.display = "block";
-                            descriptionh1.style.display = "none";
-                            descriptionSection.style.display = "none";
-                    
-                        });
-
-                        descriptionButton.addEventListener("click", function() {
-                            abouth1.style.display = "none";
-                            aboutSection.style.display = "none";
-                            descriptionh1.style.display = "block";
-                            descriptionSection.style.display = "block";
-                        });
-    </script>
+    <script src="js/home&about.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-    <script>
-        function authenticateUser() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Load account data from account.json
-            fetch('account.json')
-                .then(response => response.json())
-                .then(accountData => {
-                    // Check if the entered username and password match any account
-                    const isValidUser = accountData.some(account => account.username === username && account.password === password);
-
-                    if (isValidUser) {
-                        alert('Login successful!');
-
-                        // Store user information in localStorage
-                        const userData = { username, password };
-                        localStorage.setItem('user', JSON.stringify(userData));
-
-                        // Redirect to the dashboard or another page
-                        window.location.href = 'index.html';
-                    } else {
-                        alert('Invalid username or password. Please try again.');
-                    }
-                })
-                .catch(error => console.error('Error fetching account data:', error));
-        }
-    </script>
+    <script src="js/login.js"></script>
   
-  
-  
-  
-  
-  <script>
-        const loginform = document.getElementById("form");
-                        // Retrieve user information from localStorage
-                const userData = JSON.parse(localStorage.getItem('user'));
-
-                if (userData) {
-                    const username = userData.username;
-                    // Use the username or other user information as needed
-                } else {
-                    loginform.style.display = "block";
-                    // User is not logged in, handle accordingly
-                    // alert('User is not logged in. Redirect to login page or take appropriate action.');
-                }
-    </script>
 </body>
 </html>
